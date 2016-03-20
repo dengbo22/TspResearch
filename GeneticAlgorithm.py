@@ -199,6 +199,7 @@ class GeneticAlgorithm(object):
 if __name__ == '__main__':
     GA = GeneticAlgorithm()
     GA.do_search()
+    GA.problem.show_result()
     # GA.add_next_generation()
     # GA.selection_sort()
     # indi1 = Individuals([0, 1, 5, 0, 2, 9, 0, 3, 6, 0, 4, 8, 7])

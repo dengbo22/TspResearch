@@ -1,13 +1,14 @@
 # -*- coding: utf-8 -*-
 import re
 import copy
+import matplotlib.pyplot as plt
 from sys import float_info
 
 __author__ = 'tiny'
 
-DEFAULT_FILE_PATH = "/home/tiny/WorkSpace/PythonCode/TspResearch/berlin52.tsp"
-AVERAGE_WEIGHT = 0.5
-PARALLEL_NUMBER = 10
+DEFAULT_FILE_PATH = "/home/tiny/WorkSpace/PythonCode/TspResearch/eil51.tsp"
+AVERAGE_WEIGHT = 1
+PARALLEL_NUMBER = 1
 
 
 def split_path(center_pos, path):
@@ -46,6 +47,7 @@ class TspProblem(Problem):
         self.best_result_path = []
         self.center_position = position
         self.parallel_number = PARALLEL_NUMBER
+        self.points = []
         self.city_distance_array = []
         self.init_distance_matrix()
         self.city_size = len(self.city_distance_array)
@@ -59,13 +61,15 @@ class TspProblem(Problem):
         point_array = []
         file = open(file_path, 'r')
         for each_line in file:
-            if re.match("\d+\s[1-9]\d*\.\d*|0\.\d*\s[1-9]\d*\.\d*|0\.\d*", each_line):
+            if re.match("\d+\s[1-9]\d*\.\d*|0\.\d*|[1-9]\d*\s[1-9]\d*\.\d*|0\.\d*|[1-9]\d*", each_line):
                 each_line_array = each_line.strip().split(" ")
-                each_line_array.pop()
+                del each_line_array[0]
                 for i in range(0, len(each_line_array)):
                     each_line_array[i] = float(each_line_array[i])
                 point_array.append(each_line_array)
         file.close()
+
+        self.points = point_array
         # 计算点阵之间的距离
         size = len(point_array)
         for i in range(0, size):
@@ -77,13 +81,13 @@ class TspProblem(Problem):
         # 此时city_distance_array即为初始化完成后的城市两两距离
         return
 
-    def get_city_distance(self, start, dest):
-        result = self.city_distance_array[start][dest]
+    def get_city_distance(self, start, desti):
+        result = self.city_distance_array[start][desti]
         if result > 0:
             return result
         else:
             print("获取城市之间距离异常：城市间距离小于等于0")
-            print("Start:%s,Dest:%s" %(start, dest))
+            print("Start:%s,Dest:%s" % (start, desti))
 
     def split_path_length(self, path):
         split_array = split_path(self.center_position, path)
@@ -105,9 +109,21 @@ class TspProblem(Problem):
         for item in split_distance:
             var_sum += (item - average) ** 2
         variance = var_sum / len(split_distance)
-        return average * AVERAGE_WEIGHT + variance * (1 - AVERAGE_WEIGHT)
+        # return average * AVERAGE_WEIGHT + variance * (1 - AVERAGE_WEIGHT)
+
+        return sum(split_distance) * AVERAGE_WEIGHT + variance * (1 - AVERAGE_WEIGHT)
 
     def update_best_result(self, path):
         self.best_result_path = copy.copy(path)
         self.best_result = self.result_evaluation(path)
 
+    def show_result(self):
+        ary_x = []
+        ary_y = []
+        for item in self.best_result_path:
+            ary_x.append(self.points[item][0])
+            ary_y.append(self.points[item][1])
+            plt.scatter(self.points[item][0], self.points[item][1])
+
+        plt.plot(ary_x, ary_y)
+        plt.show()

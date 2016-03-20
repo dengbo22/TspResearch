@@ -7,13 +7,11 @@ __author__ = 'tiny'
 
 ITERATION = 100
 
-ROU = 0.9
-ALPHA = 0.5
-BETA = 0.5
+ROU = 0.5
+ALPHA = 0
+BETA = 2
 P_BEST = 0.5
-ENLARGE_Q = 1.0
-
-AVERAGE_WEIGHT = 0.5
+ENLARGE_Q = 1000.0
 
 
 class Ant(object):
@@ -106,12 +104,12 @@ class AntColonyAlgorithm(object):
 
         else:
             pheromone_percent = self.city_pheromone_array[start][dest] ** ALPHA
-            distance_percent = self.problem.get_city_distance(start, dest) ** BETA
+            distance_percent = (1.0 / self.problem.get_city_distance(start, dest)) ** BETA
             return pheromone_percent * distance_percent
 
     # 可调校：设置信息素的添加函数：
     def pheromone_add_function(self, ant):
-        return 1.0/ self.ant_judge(ant)
+        return ENLARGE_Q / self.ant_judge(ant)
 
     def do_search(self):
         self.first_loop_search()
@@ -128,14 +126,14 @@ class AntColonyAlgorithm(object):
     def first_loop_search(self):
         self.loop_search()
         self.calc_max_min_pheromone()
-        # 更新当前环境中的信息素
+        # 更新当前环境中的信息素为最大值
         current_pheromone = self.max_pheromone
         self.city_pheromone_array = [[current_pheromone for i in range(self.problem.city_size)]
                                      for j in range(self.problem.city_size)]
-        #设置EnLargeQ的值
-        print("max_pheromone:", current_pheromone)
-        print("best_result", self.problem.best_result)
 
+        # 设置EnLargeQ的值
+        # print("max_pheromone:", current_pheromone)
+        # print("best_result", self.problem.best_result)
 
     def ant_judge(self, ant):
         if ant.mark == 1 or ant.path[0] == ant.path[-1]:
@@ -187,7 +185,7 @@ class AntColonyAlgorithm(object):
             for ant_item in self.search_ant_array:
                 for position in range(city_count):
                     m = ant_item.path[position]
-                    n = ant_item.path[position + 1] % city_count
+                    n = ant_item.path[(position + 1) % city_count]
                     temp[m][n] += self.pheromone_add_function(ant_item)
                     temp[n][m] = temp[m][n]
             # 矩阵运算，可优化
@@ -201,18 +199,19 @@ class AntColonyAlgorithm(object):
                         self.city_pheromone_array[pos_x][pos_y] = self.min_pheromone
 
     def pheromone_select(self, ant):
-        probability_total = 0.0
         probability_array = []
         for i in range(len(ant.tabu_table)):
             if ant.tabu_table[i] >= 0:
                 pro = ant.tabu_table[i] * self.heuristic_function(ant.current_city_index, i)
                 probability_array.append(pro)
-                probability_total += pro
             else:
                 raise ValueError("禁忌表中第%s项值小于零,其值为%s" % (i, ant.tabu_table[i]))
 
+        probability_total = sum(probability_array)
+
         if probability_total > 0.0:
-            temp = random.random() * probability_total
+            temp = random.random()
+            temp *= probability_total
             for j in range(self.problem.city_size):
                 temp -= probability_array[j]
                 if temp < 0.0:
@@ -225,5 +224,6 @@ class AntColonyAlgorithm(object):
 
 
 if __name__ == '__main__':
-    ACO = AntColonyAlgorithm(50)
+    ACO = AntColonyAlgorithm()
     ACO.do_search()
+    ACO.problem.show_result()

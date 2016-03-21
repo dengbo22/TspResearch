@@ -6,7 +6,7 @@ from sys import float_info
 
 __author__ = 'tiny'
 
-DEFAULT_FILE_PATH = "/home/tiny/WorkSpace/PythonCode/TspResearch/eil51.tsp"
+DEFAULT_FILE_PATH = "/home/tiny/WorkSpace/PythonCode/TspResearch/berlin52.tsp"
 AVERAGE_WEIGHT = 1
 PARALLEL_NUMBER = 1
 
@@ -97,8 +97,9 @@ class TspProblem(Problem):
             distance_cache = 0.0
             distance_cache += self.get_city_distance(self.center_position, each_split_array[0])
             for i in range(0, len(each_split_array) - 2):
-                distance_cache += self.get_city_distance(i, i + 1)
+                distance_cache += self.get_city_distance(path[i], path[i + 1])
             split_distance.append(distance_cache)
+
         return split_distance
 
     def result_evaluation(self, path):
@@ -110,8 +111,8 @@ class TspProblem(Problem):
             var_sum += (item - average) ** 2
         variance = var_sum / len(split_distance)
         # return average * AVERAGE_WEIGHT + variance * (1 - AVERAGE_WEIGHT)
-
-        return sum(split_distance) * AVERAGE_WEIGHT + variance * (1 - AVERAGE_WEIGHT)
+        result = sum(split_distance) * AVERAGE_WEIGHT + variance * (1 - AVERAGE_WEIGHT)
+        return result
 
     def update_best_result(self, path):
         self.best_result_path = copy.copy(path)

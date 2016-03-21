@@ -6,7 +6,7 @@ import random
 __author__ = 'tiny'
 
 POPULATION_SIZE = 2000
-ITERATION = 30
+ITERATION = 100
 
 
 # 在结果无效的情况下，随机变异确保结果有效
@@ -136,6 +136,7 @@ class GeneticAlgorithm(object):
             self.selection_sort()
             print("第%d代生成:" % i)
             print("最优解：%s, 路径：%s" % (self.population[0].result, self.population[0].gene))
+        self.problem.update_best_result(self.population[0].gene)
 
     def crossover(self, main_individuals, sub_individuals):
         child_gene = []
@@ -199,6 +200,7 @@ class GeneticAlgorithm(object):
 if __name__ == '__main__':
     GA = GeneticAlgorithm()
     GA.do_search()
+    print(GA.problem.points)
     GA.problem.show_result()
     # GA.add_next_generation()
     # GA.selection_sort()

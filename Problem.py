@@ -6,9 +6,9 @@ from sys import float_info
 
 __author__ = 'tiny'
 
-DEFAULT_FILE_PATH = "/home/tiny/WorkSpace/PythonCode/TspResearch/berlin52.tsp"
-AVERAGE_WEIGHT = 1
-PARALLEL_NUMBER = 1
+DEFAULT_FILE_PATH = "/home/tiny/WorkSpace/PythonCode/TspResearch/eil51.tsp"
+AVERAGE_WEIGHT = 0.5
+PARALLEL_NUMBER = 10
 
 
 def split_path(center_pos, path):
@@ -82,24 +82,23 @@ class TspProblem(Problem):
         return
 
     def get_city_distance(self, start, desti):
-        result = self.city_distance_array[start][desti]
-        if result > 0:
-            return result
-        else:
-            print("获取城市之间距离异常：城市间距离小于等于0")
-            print("Start:%s,Dest:%s" % (start, desti))
+        # 被优化代码
+        # result = self.city_distance_array[start][desti]
+        # if result > 0:
+        #     return result
+        # else:
+        #     print("获取城市之间距离异常：城市间距离小于等于0")
+        #     print("Start:%s,Dest:%s" % (start, desti))
+        return self.city_distance_array[start][desti]
 
     def split_path_length(self, path):
         split_array = split_path(self.center_position, path)
         split_distance = []
-
         for each_split_array in split_array:
             distance_cache = 0.0
-            distance_cache += self.get_city_distance(self.center_position, each_split_array[0])
-            for i in range(0, len(each_split_array) - 2):
-                distance_cache += self.get_city_distance(path[i], path[i + 1])
+            for i in range(len(each_split_array)):
+                distance_cache += self.get_city_distance(path[i - 1], path[i])
             split_distance.append(distance_cache)
-
         return split_distance
 
     def result_evaluation(self, path):
@@ -125,6 +124,8 @@ class TspProblem(Problem):
             ary_x.append(self.points[item][0])
             ary_y.append(self.points[item][1])
             plt.scatter(self.points[item][0], self.points[item][1])
+        # ary_x.append(self.points[self.best_result_path[0]][0])
+        # ary_y.append(self.points[self.best_result_path[0]][1])
 
         plt.plot(ary_x, ary_y)
         plt.show()

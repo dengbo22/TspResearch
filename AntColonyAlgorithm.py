@@ -96,11 +96,12 @@ class AntColonyAlgorithm(object):
 
     # 可调校：设置蚂蚁选择下一个城市的函数机制
     def heuristic_function(self, start, dest):
-        if start > self.problem.city_size or start < 0 or dest > self.problem.city_size or start < 0:
-            print("城市信息素计算异常：出现开始/目标城市下标超出范围")
-            return
+        # 优化代码
+        # if start > self.problem.city_size or start < 0 or dest > self.problem.city_size or start < 0:
+        #     print("城市信息素计算异常：出现开始/目标城市下标超出范围")
+        #     return
 
-        elif start == dest:
+        if start == dest:
             return 0.0
 
         else:

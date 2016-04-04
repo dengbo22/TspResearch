@@ -8,11 +8,11 @@ __author__ = 'tiny'
 
 ITERATION = 100
 
-ROU = 0.5
-ALPHA = 1
-BETA = 2
+ROU = 0.9
+ALPHA = 1.0
+BETA = 2.0
 P_BEST = 0.5
-ENLARGE_Q = 1000.0
+ENLARGE_Q = 1.0
 
 
 class Ant(object):
@@ -41,6 +41,7 @@ class Ant(object):
             self.path = [-1 for i in range(Ant.city_size + Ant.parallel_size - 1)]
             self.current_city_index = -1
             self.moved_city_count = 0
+            self.result = -1
             self.mark = mark  # 表示正常
         else:
             print('Ant类参数设置有误，请检查CitySize:%d, Center:%d, Parallel%d' % (
@@ -52,6 +53,7 @@ class Ant(object):
         self.path = [-1 for i in range(Ant.city_size + Ant.parallel_size - 1)]
         self.current_city_index = -1
         self.moved_city_count = 0
+        self.result = -1
         self.mark = 0
 
     def move_to(self, position):
@@ -111,7 +113,10 @@ class AntColonyAlgorithm(object):
 
     # 可调校：设置信息素的添加函数：
     def pheromone_add_function(self, ant):
-        return ENLARGE_Q / self.ant_judge(ant)
+        if ant.result < 0:
+            return ENLARGE_Q / self.ant_judge(ant)
+        else:
+            return ENLARGE_Q / ant.result
 
     def do_search(self):
         self.first_loop_search()
@@ -158,17 +163,21 @@ class AntColonyAlgorithm(object):
             while (not ant_item.is_finished()) and ant_item.mark == 0:
                 selected_city = self.pheromone_select(ant_item)
                 ant_item.move_to(selected_city)
-            # 测试蚂蚁是否迭代最优
-            if self.ant_judge(iterate_best) > self.ant_judge(ant_item):
+            # 蚂蚁构造解完成，测试蚂蚁是否迭代最优
+            ant_item.result = self.ant_judge(ant_item)
+            if self.ant_judge(iterate_best) > ant_item.result:
                 iterate_best = ant_item
 
-        if self.ant_judge(iterate_best) < problem.best_result:
+        if iterate_best.result < problem.best_result:
             problem.update_best_result(iterate_best.path)
 
         # 计算允许的信息素最大最小值
         self.calc_max_min_pheromone()
+
         # 更新信息素
-        self.update_pheromone()
+        # self.update_pheromone()
+        self.update_pheromone_by_ant(iterate_best)
+        return
 
     def calc_max_min_pheromone(self):
         question = self.problem
@@ -204,6 +213,8 @@ class AntColonyAlgorithm(object):
             if_less = self.city_pheromone_array < self.min_pheromone
             self.city_pheromone_array = np.where(if_larger, max_array, self.city_pheromone_array)
             self.city_pheromone_array = np.where(if_less, min_array, self.city_pheromone_array)
+
+            return
             # for pos_x in range(0, city_count):
             #     for pos_y in range(0, city_count):
             #         self.city_pheromone_array[pos_x][pos_y] *= ROU
@@ -212,6 +223,21 @@ class AntColonyAlgorithm(object):
             #             self.city_pheromone_array[pos_x][pos_y] = self.max_pheromone
             #         if self.city_pheromone_array[pos_x][pos_y] < self.min_pheromone:
             #             self.city_pheromone_array[pos_x][pos_y] = self.min_pheromone
+
+    def update_pheromone_by_ant(self, ant):
+        # Pheromone Evaporation
+        self.city_pheromone_array *= ROU
+        # Add new Pheromone
+        for position in range(self.problem.city_size):
+            m = ant.path[position - 1]
+            n = ant.path[position]
+            self.city_pheromone_array[m][n] += self.pheromone_add_function(ant)
+            if self.city_pheromone_array[m][n] > self.max_pheromone:
+                self.city_pheromone_array[m][n] = self.max_pheromone
+            if self.city_pheromone_array[m][n] < self.min_pheromone:
+                self.city_pheromone_array[m][n] = self.min_pheromone
+            self.city_pheromone_array[n][m] = self.city_pheromone_array[m][n]
+        return
 
     def pheromone_select(self, ant):
         probability_array = []

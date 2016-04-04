@@ -135,7 +135,7 @@ class GeneticAlgorithm(object):
             # 淘汰产生的个体到population_size的数量
             self.selection_sort()
             print("第%d代生成:" % i)
-            print("最优解：%s, 路径：%s" % (self.population[0].result, self.population[0].gene))
+            print("最优解：%s, 路径：%s" % (self.population[0].result, Problem.split_path(self.problem.center_position,self.population[0].gene)))
         self.problem.update_best_result(self.population[0].gene)
 
     def crossover(self, main_individuals, sub_individuals):
@@ -200,11 +200,5 @@ class GeneticAlgorithm(object):
 if __name__ == '__main__':
     GA = GeneticAlgorithm()
     GA.do_search()
-    print(GA.problem.points)
     GA.problem.show_result()
-    # GA.add_next_generation()
-    # GA.selection_sort()
-    # indi1 = Individuals([0, 1, 5, 0, 2, 9, 0, 3, 6, 0, 4, 8, 7])
-    # indi2 = Individuals([1, 0, 6, 2, 0, 3, 8, 0, 7, 4, 9, 0, 5])
-    # child = GA.crossover(indi1, indi2)
-    # print(child.generation, child.gene)
+

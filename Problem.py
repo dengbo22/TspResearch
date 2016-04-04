@@ -6,9 +6,9 @@ from sys import float_info
 
 __author__ = 'tiny'
 
-DEFAULT_FILE_PATH = "/home/tiny/WorkSpace/PythonCode/TspResearch/eil51.tsp"
-AVERAGE_WEIGHT = 0.5
-PARALLEL_NUMBER = 10
+DEFAULT_FILE_PATH = "/home/tiny/WorkSpace/PythonCode/TspResearch/berlin52.tsp"
+AVERAGE_WEIGHT = 1
+PARALLEL_NUMBER = 1
 
 
 def split_path(center_pos, path):
@@ -127,5 +127,5 @@ class TspProblem(Problem):
         # ary_x.append(self.points[self.best_result_path[0]][0])
         # ary_y.append(self.points[self.best_result_path[0]][1])
 
-        plt.plot(ary_x, ary_y)
+        plt.plot(ary_x, ary_y, linewidth=1.5)
         plt.show()

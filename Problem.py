@@ -1,14 +1,15 @@
 # -*- coding: utf-8 -*-
 import re
 import copy
+import math
 import matplotlib.pyplot as plt
 from sys import float_info
 
 __author__ = 'tiny'
 
-DEFAULT_FILE_PATH = "/home/tiny/WorkSpace/PythonCode/TspResearch/berlin52.tsp"
-AVERAGE_WEIGHT = 1
-PARALLEL_NUMBER = 1
+DEFAULT_FILE_PATH = "/home/tiny/WorkSpace/PythonCode/TspResearch/eil51.tsp"
+AVERAGE_WEIGHT = 0.5
+PARALLEL_NUMBER = 5
 
 
 def split_path(center_pos, path):
@@ -97,7 +98,7 @@ class TspProblem(Problem):
         for each_split_array in split_array:
             distance_cache = 0.0
             for i in range(len(each_split_array)):
-                distance_cache += self.get_city_distance(path[i - 1], path[i])
+                distance_cache += self.get_city_distance(each_split_array[i - 1], each_split_array[i])
             split_distance.append(distance_cache)
         return split_distance
 
@@ -117,6 +118,53 @@ class TspProblem(Problem):
         self.best_result_path = copy.copy(path)
         self.best_result = self.result_evaluation(path)
 
+    def show_multi_result(self):
+        fig = plt.figure()
+        each_path = split_path(self.center_position, self.best_result_path)
+        size = len(each_path)
+        sqrt_size = math.sqrt(size)
+        if sqrt_size > int(sqrt_size):
+            sqrt_size += 1
+
+        pos_x = []
+        pos_y = []
+        all_x = []
+        all_y = []
+        # Init All
+        for item in self.points:
+            all_x.append(item[0])
+            all_y.append(item[1])
+
+
+        # Draw Result
+        i = 0
+        for i in range(size):
+            fig.add_subplot(sqrt_size, sqrt_size, i + 1)
+
+            # Draw all the point
+            plt.scatter(all_x, all_y)
+            plt.scatter(all_x[self.center_position], all_y[self.center_position], color="red")
+            # Draw Line
+
+            for item in each_path[i]:
+                pos_x.append(self.points[item][0])
+                pos_y.append(self.points[item][1])
+            plt.plot(pos_x, pos_y, linewidth=1.5)
+            pos_x = []
+            pos_y = []
+        # Draw All
+        if sqrt_size > int(sqrt_size):
+            fig.add_subplot(sqrt_size, sqrt_size, sqrt_size ** 2 - 1)
+            ary_x = []
+            ary_y = []
+            for item in self.best_result_path:
+                ary_x.append(self.points[item][0])
+                ary_y.append(self.points[item][1])
+                plt.scatter(self.points[item][0], self.points[item][1])
+            plt.plot(ary_x, ary_y, linewidth=1.5)
+
+        plt.show()
+
     def show_result(self):
         ary_x = []
         ary_y = []
@@ -124,8 +172,6 @@ class TspProblem(Problem):
             ary_x.append(self.points[item][0])
             ary_y.append(self.points[item][1])
             plt.scatter(self.points[item][0], self.points[item][1])
-        # ary_x.append(self.points[self.best_result_path[0]][0])
-        # ary_y.append(self.points[self.best_result_path[0]][1])
 
         plt.plot(ary_x, ary_y, linewidth=1.5)
         plt.show()

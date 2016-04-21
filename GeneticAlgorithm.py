@@ -200,5 +200,5 @@ class GeneticAlgorithm(object):
 if __name__ == '__main__':
     GA = GeneticAlgorithm()
     GA.do_search()
-    GA.problem.show_result()
+    GA.problem.show_multi_result()
 

@@ -5,10 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a4aa3cce-e138-4d5e-b66c-ae1dfd0bfb47" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AntColonyAlgorithm.py" afterPath="$PROJECT_DIR$/AntColonyAlgorithm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/GeneticAlgorithm.py" afterPath="$PROJECT_DIR$/GeneticAlgorithm.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problem.py" afterPath="$PROJECT_DIR$/Problem.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/TspResearch.iml" afterPath="$PROJECT_DIR$/.idea/TspResearch.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AntColonyAlgorithm.py" afterPath="$PROJECT_DIR$/AntColonyAlgorithm.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Problem.py" afterPath="$PROJECT_DIR$/Problem.py" />
     </list>
     <ignored path="TspResearch.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,13 +34,14 @@
     <favorites_list name="TspResearch" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="AntColonyAlgorithm.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+            <state relative-caret-position="88">
+              <caret line="197" column="31" selection-start-line="197" selection-start-column="31" selection-end-line="197" selection-end-column="31" />
               <folding>
+                <element signature="e#24#37#0" expanded="true" />
                 <element signature="e#255#2465#0" expanded="false" />
                 <element signature="e#255#447#1" expanded="false" />
                 <element signature="e#579#749#0" expanded="false" />
@@ -48,16 +50,11 @@
                 <element signature="e#1781#2242#0" expanded="false" />
                 <element signature="e#2281#2359#0" expanded="false" />
                 <element signature="e#2396#2465#0" expanded="false" />
-                <element signature="e#2544#3010#0" expanded="false" />
                 <element signature="e#3094#3574#0" expanded="false" />
                 <element signature="e#3643#3768#0" expanded="false" />
                 <element signature="e#4303#4716#0" expanded="false" />
                 <element signature="e#4756#4912#0" expanded="false" />
-                <element signature="e#5983#6581#0" expanded="false" />
-                <element signature="e#6623#8314#0" expanded="false" />
-                <element signature="e#8368#9038#0" expanded="false" />
-                <element signature="e#9096#9922#0" expanded="false" />
-                <element signature="e#9969#10798#0" expanded="false" />
+                <element signature="e#9209#10038#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -66,15 +63,31 @@
       <file leaf-file-name="Problem.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Problem.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
-              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+            <state relative-caret-position="388">
+              <caret line="109" column="55" selection-start-line="109" selection-start-column="55" selection-end-line="109" selection-end-column="55" />
               <folding>
-                <element signature="e#24#33#0" expanded="true" />
                 <element signature="e#296#741#0" expanded="false" />
-                <element signature="e#867#899#0" expanded="false" />
-                <element signature="e#895#899#0" expanded="false" />
+                <element signature="e#456#716#0" expanded="false" />
+                <element signature="e#565#626#0" expanded="false" />
+                <element signature="e#778#837#0" expanded="false" />
+                <element signature="e#1370#2474#0" expanded="false" />
+                <element signature="e#1607#1977#0" expanded="false" />
+                <element signature="e#1716#1977#0" expanded="false" />
+                <element signature="e#2131#2412#0" expanded="false" />
+                <element signature="e#2205#2351#0" expanded="false" />
                 <element signature="e#2531#2821#0" expanded="false" />
-                <element signature="e#3839#3934#0" expanded="false" />
+                <element signature="e#2531#2538#0" expanded="false" />
+                <element signature="e#3429#3907#0" expanded="false" />
+                <element signature="e#3957#4052#0" expanded="false" />
+                <element signature="e#4095#5583#0" expanded="false" />
+                <element signature="e#4337#4378#0" expanded="false" />
+                <element signature="e#4520#4575#0" expanded="false" />
+                <element signature="e#4655#5127#0" expanded="false" />
+                <element signature="e#4946#5031#0" expanded="false" />
+                <element signature="e#5193#5563#0" expanded="false" />
+                <element signature="e#5356#5513#0" expanded="false" />
+                <element signature="e#5620#5920#0" expanded="false" />
+                <element signature="e#5705#5854#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -83,7 +96,7 @@
       <file leaf-file-name="GeneticAlgorithm.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state relative-caret-position="-2626">
               <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
               <folding>
                 <element signature="e#646#970#0" expanded="false" />
@@ -112,17 +125,14 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/GeneticAlgorithm.py" />
-        <option value="$PROJECT_DIR$/Problem.py" />
         <option value="$PROJECT_DIR$/AntColonyAlgorithm.py" />
+        <option value="$PROJECT_DIR$/Problem.py" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" />
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
-  </component>
-  <component name="NamedScopeManager">
-    <order />
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="1366" />
@@ -170,14 +180,18 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
+      <manualOrder />
+      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/.PyCharm40/system/snapshots/TspResearch2.pstat" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="FullScreen" value="false" />
     <property name="recentsLimit" value="5" />
+    <property name="settings.editor.selected.configurable" value="preferences.keymap" />
+    <property name="settings.editor.splitter.proportion" value="0.2" />
   </component>
   <component name="RunManager" selected="Python.AntColonyAlgorithm">
     <configuration default="false" name="AntColonyAlgorithm" type="PythonConfigurationType" factoryName="Python" temporary="true">
@@ -198,57 +212,6 @@
       <option name="SHOW_COMMAND_LINE" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="DjangoTestsConfigurationType" factoryName="Django tests">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="TspResearch" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="TARGET" value="" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
-    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="TspResearch" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
-    <configuration default="true" type="PyLettuceRunConfigurationType" factoryName="Lettuce">
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <module name="TspResearch" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
-      <option name="ADDITIONAL_ARGS" value="" />
-      <method />
-    </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -265,15 +228,6 @@
       <option name="SCRIPT_NAME" value="" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
-      <method />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <pass-parent-envs>true</pass-parent-envs>
-      <envs />
       <method />
     </configuration>
     <configuration default="true" type="tests" factoryName="Attests">
@@ -414,7 +368,9 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="ShelveChangesManager" show_recycled="false" />
+  <component name="ShelveChangesManager" show_recycled="false">
+    <option name="remove_strategy" value="false" />
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -423,6 +379,7 @@
       <changelist id="a4aa3cce-e138-4d5e-b66c-ae1dfd0bfb47" name="Default" comment="" />
       <created>1453716647610</created>
       <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
       <updated>1453716647610</updated>
     </task>
     <servers />
@@ -431,46 +388,46 @@
     <frame x="1366" y="24" width="1366" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14641288" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4128167" sideWeight="0.50269026" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30253354" sideWeight="0.49730977" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3099851" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2414307" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14641288" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4128167" sideWeight="0.50269026" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2615156" sideWeight="0.49730977" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3907875" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2414307" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4128167" sideWeight="0.50269026" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.30402383" sideWeight="0.49730977" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.14641288" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.2414307" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3099851" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4128167" sideWeight="0.50269026" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32935917" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26597324" sideWeight="0.49730977" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14641288" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="3" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2414307" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3907875" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -496,7 +453,7 @@
           </properties>
         </breakpoint>
       </default-breakpoints>
-      <option name="time" value="95" />
+      <option name="time" value="97" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="PythonConfigurationType">
@@ -509,9 +466,10 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -520,38 +478,49 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="100" column="46" selection-start-line="100" selection-start-column="46" selection-end-line="100" selection-end-column="46" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -565,9 +534,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="7" column="14" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -576,38 +546,49 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="100" column="46" selection-start-line="100" selection-start-column="46" selection-end-line="100" selection-end-column="46" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -621,9 +602,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="186" column="61" selection-start-line="186" selection-start-column="39" selection-end-line="186" selection-end-column="61" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -632,38 +614,49 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="101" column="36" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -677,9 +670,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -688,38 +682,49 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="101" column="36" selection-start-line="101" selection-start-column="36" selection-end-line="101" selection-end-column="36" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="150" column="39" selection-start-line="150" selection-start-column="39" selection-end-line="150" selection-end-column="39" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -733,9 +738,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -744,38 +750,49 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="87" column="44" selection-start-line="87" selection-start-column="44" selection-end-line="87" selection-end-column="44" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="5" column="18" selection-start-line="5" selection-start-column="18" selection-end-line="5" selection-end-column="18" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -789,9 +806,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -800,38 +818,49 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="99" column="34" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -845,9 +874,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -856,38 +886,49 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="99" column="34" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -901,9 +942,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -912,38 +954,49 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="99" column="34" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -957,9 +1010,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="118" column="0" selection-start-line="118" selection-start-column="0" selection-end-line="118" selection-end-column="0" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -968,38 +1022,49 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="99" column="34" selection-start-line="99" selection-start-column="34" selection-end-line="99" selection-end-column="34" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -1013,22 +1078,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -1042,22 +1123,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -1071,9 +1168,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="144" column="11" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="11" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -1082,38 +1180,49 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -1127,9 +1236,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="144" column="11" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="11" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -1138,38 +1248,49 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -1183,9 +1304,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="160" column="32" selection-start-line="160" selection-start-column="32" selection-end-line="160" selection-end-column="32" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -1194,38 +1316,49 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -1239,9 +1372,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="160" column="32" selection-start-line="160" selection-start-column="32" selection-end-line="160" selection-end-column="32" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -1250,40 +1384,52 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="25" column="41" selection-start-line="25" selection-start-column="38" selection-end-line="25" selection-end-column="41" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -1292,58 +1438,35 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3324397">
+        <state relative-caret-position="0">
           <caret line="1777" column="0" selection-start-line="1777" selection-start-column="0" selection-end-line="1777" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67828417">
+        <state relative-caret-position="0">
           <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/-1247971765/sys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.30109206">
-          <caret line="497" column="9" selection-start-line="497" selection-start-column="9" selection-end-line="497" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python3.4/pickle.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3325893">
-          <caret line="1025" column="13" selection-start-line="1025" selection-start-column="13" selection-end-line="1025" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/-1247971765/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="552" column="7" selection-start-line="552" selection-start-column="7" selection-end-line="552" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/-1247971765/sys.py" />
+    <entry file="file:///usr/lib/python3.4/pickle.py" />
+    <entry file="file://$USER_HOME$/.PyCharm40/system/python_stubs/-1247971765/builtins.py" />
     <entry file="file://$PROJECT_DIR$/GeneticAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state relative-caret-position="-2626">
           <caret line="20" column="27" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
           <folding>
             <element signature="e#646#970#0" expanded="false" />
@@ -1357,24 +1480,41 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Problem.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+        <state relative-caret-position="388">
+          <caret line="109" column="55" selection-start-line="109" selection-start-column="55" selection-end-line="109" selection-end-column="55" />
           <folding>
-            <element signature="e#24#33#0" expanded="true" />
             <element signature="e#296#741#0" expanded="false" />
-            <element signature="e#867#899#0" expanded="false" />
-            <element signature="e#895#899#0" expanded="false" />
+            <element signature="e#456#716#0" expanded="false" />
+            <element signature="e#565#626#0" expanded="false" />
+            <element signature="e#778#837#0" expanded="false" />
+            <element signature="e#1370#2474#0" expanded="false" />
+            <element signature="e#1607#1977#0" expanded="false" />
+            <element signature="e#1716#1977#0" expanded="false" />
+            <element signature="e#2131#2412#0" expanded="false" />
+            <element signature="e#2205#2351#0" expanded="false" />
             <element signature="e#2531#2821#0" expanded="false" />
-            <element signature="e#3839#3934#0" expanded="false" />
+            <element signature="e#2531#2538#0" expanded="false" />
+            <element signature="e#3429#3907#0" expanded="false" />
+            <element signature="e#3957#4052#0" expanded="false" />
+            <element signature="e#4095#5583#0" expanded="false" />
+            <element signature="e#4337#4378#0" expanded="false" />
+            <element signature="e#4520#4575#0" expanded="false" />
+            <element signature="e#4655#5127#0" expanded="false" />
+            <element signature="e#4946#5031#0" expanded="false" />
+            <element signature="e#5193#5563#0" expanded="false" />
+            <element signature="e#5356#5513#0" expanded="false" />
+            <element signature="e#5620#5920#0" expanded="false" />
+            <element signature="e#5705#5854#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AntColonyAlgorithm.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="114" column="0" selection-start-line="114" selection-start-column="0" selection-end-line="114" selection-end-column="0" />
+        <state relative-caret-position="88">
+          <caret line="197" column="31" selection-start-line="197" selection-start-column="31" selection-end-line="197" selection-end-column="31" />
           <folding>
+            <element signature="e#24#37#0" expanded="true" />
             <element signature="e#255#2465#0" expanded="false" />
             <element signature="e#255#447#1" expanded="false" />
             <element signature="e#579#749#0" expanded="false" />
@@ -1383,19 +1523,29 @@
             <element signature="e#1781#2242#0" expanded="false" />
             <element signature="e#2281#2359#0" expanded="false" />
             <element signature="e#2396#2465#0" expanded="false" />
-            <element signature="e#2544#3010#0" expanded="false" />
             <element signature="e#3094#3574#0" expanded="false" />
             <element signature="e#3643#3768#0" expanded="false" />
             <element signature="e#4303#4716#0" expanded="false" />
             <element signature="e#4756#4912#0" expanded="false" />
-            <element signature="e#5983#6581#0" expanded="false" />
-            <element signature="e#6623#8314#0" expanded="false" />
-            <element signature="e#8368#9038#0" expanded="false" />
-            <element signature="e#9096#9922#0" expanded="false" />
-            <element signature="e#9969#10798#0" expanded="false" />
+            <element signature="e#9209#10038#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>

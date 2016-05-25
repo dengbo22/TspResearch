@@ -178,9 +178,8 @@ class AntColonyAlgorithm(object):
         self.calc_max_min_pheromone()
 
         # 更新信息素
-        # self.update_pheromone()
-        self.update_pheromone_by_ant(iterate_best)
-        # self.update_pheromone_by_average(iterate_best)
+        self.update_pheromone()
+        self.update_pheromone_by_average(iterate_best)
         return
 
     def calc_max_min_pheromone(self):
@@ -198,39 +197,33 @@ class AntColonyAlgorithm(object):
 
     def update_pheromone(self):
         city_count = self.problem.city_size
-        temp = np.zeros((city_count, city_count))
+
+        # Pheromone Evaporate
+        self.city_pheromone_array *= ROU
+        # Each Ant Update Pheromone
+        for ant_item in self.search_ant_array:
+            self.add_pheromone_by_ant(ant_item)
+
+        # Adjust the Max-Min pheromone
+        self.check_max_min_pheromone()
+
+        return
+
+    def check_max_min_pheromone(self):
+
         if self.calc_max_min_pheromone():
-            # 矩阵运算，可优化
-            for ant_item in self.search_ant_array:
-                for position in range(city_count):
-                    m = ant_item.path[position]
-                    n = ant_item.path[(position + 1) % city_count]
-                    temp[m][n] += self.pheromone_add_function(ant_item)
-                    temp[n][m] = temp[m][n]
-
-            self.city_pheromone_array *= ROU
-            self.city_pheromone_array += temp
-
+            city_count = self.problem.city_size
             max_array = np.ones((city_count, city_count)) * self.max_pheromone
             min_array = np.ones((city_count, city_count)) * self.min_pheromone
             if_larger = self.city_pheromone_array > self.max_pheromone
             if_less = self.city_pheromone_array < self.min_pheromone
             self.city_pheromone_array = np.where(if_larger, max_array, self.city_pheromone_array)
             self.city_pheromone_array = np.where(if_less, min_array, self.city_pheromone_array)
+            return True
 
-            return
-            # for pos_x in range(0, city_count):
-            #     for pos_y in range(0, city_count):
-            #         self.city_pheromone_array[pos_x][pos_y] *= ROU
-            #         self.city_pheromone_array[pos_x][pos_y] += temp[pos_x][pos_y]
-            #         if self.city_pheromone_array[pos_x][pos_y] > self.max_pheromone:
-            #             self.city_pheromone_array[pos_x][pos_y] = self.max_pheromone
-            #         if self.city_pheromone_array[pos_x][pos_y] < self.min_pheromone:
-            #             self.city_pheromone_array[pos_x][pos_y] = self.min_pheromone
+        return False
 
-    def update_pheromone_by_ant(self, ant):
-        # Pheromone Evaporation
-        self.city_pheromone_array *= ROU
+    def add_pheromone_by_ant(self, ant):
         # Add new Pheromone
         for position in range(self.problem.city_size):
             m = ant.path[position - 1]
@@ -242,6 +235,10 @@ class AntColonyAlgorithm(object):
                 self.city_pheromone_array[m][n] = self.min_pheromone
             self.city_pheromone_array[n][m] = self.city_pheromone_array[m][n]
         return
+
+    def add_pheromone_by_average(self, ant):
+        pass
+
 
     def update_pheromone_by_average(self, ant):
         each_length = self.problem.split_path_length(ant.path)

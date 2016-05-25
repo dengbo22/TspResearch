@@ -7,7 +7,7 @@ from sys import float_info
 
 __author__ = 'tiny'
 
-DEFAULT_FILE_PATH = "/home/tiny/WorkSpace/PythonCode/TspResearch/eil51.tsp"
+DEFAULT_FILE_PATH = "/home/tiny/workspace/PythonCode/TspResearch/eil51.tsp"
 AVERAGE_WEIGHT = 0.5
 PARALLEL_NUMBER = 5
 
@@ -62,7 +62,7 @@ class TspProblem(Problem):
         point_array = []
         file = open(file_path, 'r')
         for each_line in file:
-            if re.match("\d+\s[1-9]\d*\.\d*|0\.\d*|[1-9]\d*\s[1-9]\d*\.\d*|0\.\d*|[1-9]\d*", each_line):
+            if re.match('\d+\s[1-9]\d*\.\d*|0\.\d*|[1-9]\d*\s[1-9]\d*\.\d*|0\.\d*|[1-9]\d*', each_line):
                 each_line_array = each_line.strip().split(" ")
                 del each_line_array[0]
                 for i in range(0, len(each_line_array)):
@@ -94,13 +94,21 @@ class TspProblem(Problem):
 
     def split_path_length(self, path):
         split_array = split_path(self.center_position, path)
-        split_distance = []
+        cache_distance = []
         for each_split_array in split_array:
-            distance_cache = 0.0
-            for i in range(len(each_split_array)):
-                distance_cache += self.get_city_distance(each_split_array[i - 1], each_split_array[i])
-            split_distance.append(distance_cache)
-        return split_distance
+            cache = self.get_path_length(each_split_array)
+            cache_distance.append(cache)
+
+        return cache_distance
+
+    def get_path_length(self, path):
+        size = len(path)
+        path_length = 0.0
+        for i in range(size):
+            m = path[i - 1]
+            n = path[i]
+            path_length += self.get_city_distance(m, n)
+        return path_length
 
     def result_evaluation(self, path):
         split_distance = self.split_path_length(path)
@@ -123,8 +131,10 @@ class TspProblem(Problem):
         each_path = split_path(self.center_position, self.best_result_path)
         size = len(each_path)
         sqrt_size = math.sqrt(size)
-        if sqrt_size > int(sqrt_size):
+        real_size = int(sqrt_size)
+        if sqrt_size > real_size:
             sqrt_size += 1
+            real_size += 1
 
         pos_x = []
         pos_y = []
@@ -134,7 +144,6 @@ class TspProblem(Problem):
         for item in self.points:
             all_x.append(item[0])
             all_y.append(item[1])
-
 
         # Draw Result
         i = 0
@@ -153,8 +162,8 @@ class TspProblem(Problem):
             pos_x = []
             pos_y = []
         # Draw All
-        if sqrt_size > int(sqrt_size):
-            fig.add_subplot(sqrt_size, sqrt_size, sqrt_size ** 2 - 1)
+        if sqrt_size > real_size:
+            fig.add_subplot(sqrt_size, sqrt_size, real_size ** 2)
             ary_x = []
             ary_y = []
             for item in self.best_result_path:

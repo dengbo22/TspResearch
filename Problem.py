@@ -7,7 +7,7 @@ from sys import float_info
 
 __author__ = 'tiny'
 
-DEFAULT_FILE_PATH = "/home/tiny/workspace/PythonCode/TspResearch/eil51.tsp"
+DEFAULT_FILE_PATH = "/home/tiny/workspace/PythonCode/TspResearch/selfdesign.tsp"
 AVERAGE_WEIGHT = 0.5
 PARALLEL_NUMBER = 5
 
@@ -62,8 +62,8 @@ class TspProblem(Problem):
         point_array = []
         file = open(file_path, 'r')
         for each_line in file:
-            if re.match('\d+\s[1-9]\d*\.\d*|0\.\d*|[1-9]\d*\s[1-9]\d*\.\d*|0\.\d*|[1-9]\d*', each_line):
-                each_line_array = each_line.strip().split(" ")
+            if re.match('\d+|0\s[1-9]\d*\.\d*|0\.\d*|[1-9]\d*\s[1-9]\d*\.\d*|0\.\d*|[1-9]\d*', each_line):
+                each_line_array = each_line.strip().split()
                 del each_line_array[0]
                 for i in range(0, len(each_line_array)):
                     each_line_array[i] = float(each_line_array[i])

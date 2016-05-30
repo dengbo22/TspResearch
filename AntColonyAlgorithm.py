@@ -6,15 +6,18 @@ from sys import float_info
 
 __author__ = 'tiny'
 
-ITERATION = 100
+ITERATION = 500
 
 ROU = 0.9
 ALPHA = 1.0
 BETA = 2.0
 P_BEST = 0.5
 ENLARGE_Q = 1.0
-MAX_RATE = 1.2
-MIN_RATE = 0.8
+
+
+def average_level_rate(x):
+    result = 0.1 + 0.9 / (1 + np.exp(10 * x - 5))
+    return result
 
 
 class Ant(object):
@@ -174,12 +177,9 @@ class AntColonyAlgorithm(object):
         if iterate_best.result < problem.best_result:
             problem.update_best_result(iterate_best.path)
 
-        # 计算允许的信息素最大最小值
-        self.calc_max_min_pheromone()
-
         # 更新信息素
         self.update_pheromone()
-        self.update_pheromone_by_average(iterate_best)
+        self.add_pheromone_by_average(iterate_best)
         return
 
     def calc_max_min_pheromone(self):
@@ -196,13 +196,13 @@ class AntColonyAlgorithm(object):
             return False
 
     def update_pheromone(self):
-        city_count = self.problem.city_size
 
         # Pheromone Evaporate
         self.city_pheromone_array *= ROU
         # Each Ant Update Pheromone
         for ant_item in self.search_ant_array:
             self.add_pheromone_by_ant(ant_item)
+            self.add_pheromone_by_average(ant_item)
 
         # Adjust the Max-Min pheromone
         self.check_max_min_pheromone()
@@ -210,9 +210,9 @@ class AntColonyAlgorithm(object):
         return
 
     def check_max_min_pheromone(self):
+        city_count = self.problem.city_size
 
         if self.calc_max_min_pheromone():
-            city_count = self.problem.city_size
             max_array = np.ones((city_count, city_count)) * self.max_pheromone
             min_array = np.ones((city_count, city_count)) * self.min_pheromone
             if_larger = self.city_pheromone_array > self.max_pheromone
@@ -237,7 +237,27 @@ class AntColonyAlgorithm(object):
         return
 
     def add_pheromone_by_average(self, ant):
-        pass
+        subpaths = Problem.split_path(self.problem.center_position, ant.path)
+        subpaths_length = []
+        for i in range(len(subpaths)):
+            subpaths_length.append(self.problem.get_path_length(subpaths[i]))
+        subpaths_rate = np.array(subpaths_length)
+        average = np.mean(subpaths_rate)
+        subpaths_rate -= average
+        divider = max(subpaths_rate)
+        subpaths_rate /= divider
+        # 每段路径根据Rate来进行更新
+
+        base_pheromone = self.pheromone_add_function(ant)
+
+        for i in range(len(subpaths)):
+            subpath = subpaths[i]
+            subpath_size = len(subpath)
+            add_pheromone = base_pheromone * average_level_rate(subpaths_rate[i])
+            for j in range(subpath_size):
+                m = subpath[j - 1]
+                n = subpath[j]
+                self.city_pheromone_array[m][n] += add_pheromone
 
 
     def update_pheromone_by_average(self, ant):

@@ -2,6 +2,7 @@
 import random
 import Problem
 import numpy as np
+from abc import ABCMeta, abstractmethod
 from sys import float_info
 
 __author__ = 'tiny'
@@ -88,7 +89,23 @@ class Ant(object):
 
 
 class AntColonyAlgorithm(object):
+    __metaclass__ = ABCMeta
+
+    def __init__(self):
+        pass
+
+    @abstractmethod
+    def heuristic_function(self, start, dest):
+        pass
+
+    @abstractmethod
+    def update_pheromone(self):
+        pass
+
+
+class MultiAntColonyAlgorithm(AntColonyAlgorithm):
     def __init__(self, center=0):
+        super().__init__()
         self.problem = Problem.TspProblem(center)
         cities = self.problem.city_size
         # 初始化蚁群
@@ -259,7 +276,6 @@ class AntColonyAlgorithm(object):
                 n = subpath[j]
                 self.city_pheromone_array[m][n] += add_pheromone
 
-
     def update_pheromone_by_average(self, ant):
         each_length = self.problem.split_path_length(ant.path)
         size = len(each_length)
@@ -307,6 +323,6 @@ class AntColonyAlgorithm(object):
 
 
 if __name__ == '__main__':
-    ACO = AntColonyAlgorithm()
+    ACO = MultiAntColonyAlgorithm()
     ACO.do_search()
     ACO.problem.show_multi_result()

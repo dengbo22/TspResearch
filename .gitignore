@@ -87,3 +87,6 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Pycharm IDE's workspace
+.idea/workspace.xml

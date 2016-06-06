@@ -4,13 +4,15 @@ import copy
 import math
 import matplotlib.pyplot as plt
 from sys import float_info
+import numpy as np
 
 __author__ = 'tiny'
 
-DEFAULT_FILE_PATH = "/home/tiny/workspace/PythonCode/TspResearch/selfdesign.tsp"
-AVERAGE_WEIGHT = 0.5
+# DEFAULT_FILE_PATH = "/home/tiny/workspace/PythonCode/TspResearch/selfdesign.tsp"
+DEFAULT_FILE_PATH = "E:\TspResearch\selfdesign.tsp"
+UNIFORMITY_WEIGHT = 1
 PARALLEL_NUMBER = 5
-
+AVERAGE_RATE = 0.5
 
 def split_path(center_pos, path):
     size = len(path)
@@ -112,14 +114,14 @@ class TspProblem(Problem):
 
     def result_evaluation(self, path):
         split_distance = self.split_path_length(path)
+        subtour_distance = np.array(split_distance)
         # 对split_distance做操作判断该解的优越性
-        average = sum(split_distance) / len(split_distance)
-        var_sum = 0
-        for item in split_distance:
-            var_sum += (item - average) ** 2
-        variance = var_sum / len(split_distance)
-        # return average * AVERAGE_WEIGHT + variance * (1 - AVERAGE_WEIGHT)
-        result = sum(split_distance) * AVERAGE_WEIGHT + variance * (1 - AVERAGE_WEIGHT)
+        average = np.mean(subtour_distance)
+        variance = np.var(subtour_distance)
+        std = np.std(subtour_distance)
+
+        # result = average * PARALLEL_NUMBER * AVERAGE_RATE + variance *(1- AVERAGE_RATE)
+        result = average + UNIFORMITY_WEIGHT * variance
         return result
 
     def update_best_result(self, path):

@@ -141,15 +141,18 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
             return ENLARGE_Q / ant.result
 
     def do_search(self):
+
         self.first_loop_search()
         iterate_times = ITERATION
 
         while iterate_times:
-            self.loop_search()
+            result_changed = self.loop_search()
             iterate_times -= 1
-            print("第%d次迭代，最优解%s" % (ITERATION - iterate_times, self.problem.best_result))
-            # print("最优解路径：", Problem.split_path(self.problem.center_position, self.problem.best_result_path))
-            print("每段长度：", self.problem.split_path_length(self.problem.best_result_path))
+            # Simplify the output
+            if result_changed or iterate_times % 50 == 0:
+                print("第%d次迭代，最优解%s" % (ITERATION - iterate_times, self.problem.best_result))
+                # print("最优解路径：", Problem.split_path(self.problem.center_position, self.problem.best_result_path))
+                print("每段长度：", self.problem.split_path_length(self.problem.best_result_path))
 
         return
 
@@ -160,7 +163,6 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
         current_pheromone = self.max_pheromone
         self.city_pheromone_array = np.ones((self.problem.city_size, self.problem.city_size))
         self.city_pheromone_array *= current_pheromone
-
 
         # 设置EnLargeQ的值
         # print("max_pheromone:", current_pheromone)
@@ -173,6 +175,7 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
             return self.problem.result_evaluation(ant.path)
 
     def loop_search(self):
+        pre_add = id(self.problem.best_result)
         problem = self.problem
 
         # 初始化每只蚂蚁
@@ -197,7 +200,8 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
         # 更新信息素
         self.update_pheromone()
         self.add_pheromone_by_average(iterate_best)
-        return
+        post_addr = id(self.problem.best_result)
+        return pre_add != post_addr
 
     def calc_max_min_pheromone(self):
         question = self.problem
@@ -212,14 +216,17 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
             print("最大最小信息素计算异常，最大值%s\t最小值%s" % (self.max_pheromone, self.min_pheromone))
             return False
 
-    def update_pheromone(self):
-
+    def update_pheromone(self, special_ant=None):
         # Pheromone Evaporate
         self.city_pheromone_array *= ROU
         # Each Ant Update Pheromone
         for ant_item in self.search_ant_array:
-            self.add_pheromone_by_ant(ant_item)
+            # self.add_pheromone_by_ant(ant_item)
             self.add_pheromone_by_average(ant_item)
+
+        # Use special ant to do the extra pheromone update.
+        if special_ant is not None:
+            self.add_pheromone_by_average(special_ant)
 
         # Adjust the Max-Min pheromone
         self.check_max_min_pheromone()
@@ -228,7 +235,6 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
 
     def check_max_min_pheromone(self):
         city_count = self.problem.city_size
-
         if self.calc_max_min_pheromone():
             max_array = np.ones((city_count, city_count)) * self.max_pheromone
             min_array = np.ones((city_count, city_count)) * self.min_pheromone
@@ -266,6 +272,7 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
         # 每段路径根据Rate来进行更新
 
         base_pheromone = self.pheromone_add_function(ant)
+        # base_pheromone = 1.0 / (self.problem.get_path_length(ant.path))
 
         for i in range(len(subpaths)):
             subpath = subpaths[i]

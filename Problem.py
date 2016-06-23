@@ -8,8 +8,7 @@ import numpy as np
 
 __author__ = 'tiny'
 
-# DEFAULT_FILE_PATH = "/home/tiny/workspace/PythonCode/TspResearch/selfdesign.tsp"
-DEFAULT_FILE_PATH = "E:\TspResearch\selfdesign.tsp"
+DEFAULT_FILE_PATH = "./dataset/selfdesign.tsp"
 UNIFORMITY_WEIGHT = 1
 PARALLEL_NUMBER = 5
 AVERAGE_RATE = 0.5

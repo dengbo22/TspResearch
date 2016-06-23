@@ -283,27 +283,6 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
                 n = subpath[j]
                 self.city_pheromone_array[m][n] += add_pheromone
 
-    def update_pheromone_by_average(self, ant):
-        each_length = self.problem.split_path_length(ant.path)
-        size = len(each_length)
-        aver = sum(each_length) / size
-        for i in range(size):
-            each_length[i] = abs(each_length[i] - aver)
-        index = list(range(size))
-        index.sort(key=lambda k: each_length[k])
-        # 下面进入信息素更新部分
-        current_rate = MAX_RATE
-        step = (current_rate - MIN_RATE) / size
-
-        splited_path = Problem.split_path(self.problem.center_position, ant.path)
-        for i in range(size):
-            increase_path = splited_path[index[i]]
-            for j in range(len(increase_path)):
-                m = increase_path[j - 1]
-                n = increase_path[j]
-                self.city_pheromone_array[m][n] += self.problem.result_evaluation(ant.path) * current_rate
-            current_rate -= step
-
     def pheromone_select(self, ant):
         probability_array = []
         for i in range(len(ant.tabu_table)):

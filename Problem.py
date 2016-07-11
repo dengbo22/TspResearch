@@ -38,6 +38,13 @@ def distance(x1, y1, x2, y2):
     return sqr ** 0.5
 
 
+def uniformity_enlarge(x):
+    y = abs(x);
+    y = (y - 0.3) / 0.7;
+    y = np.where(y < 0, np.zeros(len(y)), y);
+    return y;
+
+
 class Problem(object):
     def __init__(self):
         pass
@@ -110,10 +117,16 @@ class TspProblem(Problem):
         subtour_distance = np.array(split_distance)
         # 对split_distance做操作判断该解的优越性
         average = np.mean(subtour_distance)
+        delta_array = np.array(abs(subtour_distance - average));
+        normalization_delta = delta_array / max(delta_array);
+        new_variance = np.dot(uniformity_enlarge(normalization_delta), delta_array);
+
         variance = np.var(subtour_distance)
         std = np.std(subtour_distance)
 
-        result = average + UNIFORMITY_WEIGHT * variance
+        result = average + UNIFORMITY_WEIGHT * new_variance;
+        # result = average + UNIFORMITY_WEIGHT * variance;
+        # result = average + UNIFORMITY_WEIGHT * std;
         return result
 
     def update_best_result(self, path):

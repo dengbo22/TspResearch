@@ -129,9 +129,10 @@ class AntColonyAlgorithm(object):
             result_changed = self.loop_search();
             iterate_times -= 1;
             # Simplify the output
-            if result_changed or iterate_times % 50 == 0:
+            if result_changed or iterate_times % int(ITERATION / 10) == 0:
                 print("第%d次迭代，%s = %s" %
-                      (ITERATION - iterate_times, self.problem.best_result, self.problem.split_path_length(self.problem.best_result_path)))
+                      (ITERATION - iterate_times, self.problem.split_path_length(self.problem.best_result_path),
+                       self.problem.best_result));
                 # print("最优解路径：", Problem.split_path(self.problem.center_position, self.problem.best_result_path))
 
         return
@@ -274,6 +275,13 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
                 self.city_pheromone_array[m][n] += add_pheromone
         return
 
+    # 可调校：设置信息素的添加函数：
+    def pheromone_add_function(self, ant):
+        if ant.result < 0:
+            return ENLARGE_Q / self.path_evaluation(ant.path)
+        else:
+            return ENLARGE_Q / ant.result
+
     def check_max_min_pheromone(self):
         city_count = self.problem.city_size
         if self.calc_max_min_pheromone():
@@ -302,13 +310,7 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
             distance_percent = (1.0 / self.problem.get_city_distance(start, dest)) ** BETA
             return pheromone_percent * distance_percent
 
-    # 可调校：设置信息素的添加函数：
-    def pheromone_add_function(self, ant):
-        if ant.result < 0:
-            return ENLARGE_Q / self.path_evaluation(ant.path)
-        else:
-            return ENLARGE_Q / ant.result
-
+    # Implement
     def path_evaluation(self, path):
         if (not path) or (-1 in path):
             return float_info.max;

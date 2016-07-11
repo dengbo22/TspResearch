@@ -4,6 +4,7 @@ import Problem
 import numpy as np
 from abc import ABCMeta, abstractmethod
 from sys import float_info
+from copy import copy
 
 __author__ = 'tiny'
 
@@ -63,7 +64,6 @@ class Ant(object):
         self.mark = 0
 
     def move_to(self, position):
-
         if position == -1:
             print("选择目的城市错误，异常退出")
             return False
@@ -80,7 +80,7 @@ class Ant(object):
         self.moved_city_count += 1
         return True
 
-    def random_choose(self):
+    def choose_randomly(self):
         selected = random.randint(0, Ant.city_size - 1)
         self.move_to(selected)
 
@@ -89,23 +89,7 @@ class Ant(object):
 
 
 class AntColonyAlgorithm(object):
-    __metaclass__ = ABCMeta
-
-    def __init__(self):
-        pass
-
-    @abstractmethod
-    def heuristic_function(self, start, dest):
-        pass
-
-    @abstractmethod
-    def update_pheromone(self):
-        pass
-
-
-class MultiAntColonyAlgorithm(AntColonyAlgorithm):
     def __init__(self, center=0):
-        super().__init__()
         self.problem = Problem.TspProblem(center)
         cities = self.problem.city_size
         # 初始化蚁群
@@ -116,46 +100,97 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
         self.max_pheromone = 0.0
         self.min_pheromone = 0.0
         self.city_pheromone_array = np.ones((cities, cities))
-        return
 
-    # 可调校：设置蚂蚁选择下一个城市的函数机制
-    def heuristic_function(self, start, dest):
-        # 优化代码
-        # if start > self.problem.city_size or start < 0 or dest > self.problem.city_size or start < 0:
-        #     print("城市信息素计算异常：出现开始/目标城市下标超出范围")
-        #     return
+    def loop_search(self):
+        """
+        :return: return whether the result has updated,
+                 true for updated, False for no updated.
+        """
+        # Get current address of result.
+        pre_addr = id(self.problem.best_result);
+        # Search the iteration best ant.
+        iterate_best_path = self.ant_search();
+        # Compare the iteration best ant with global best ant.
+        if self.path_evaluation(iterate_best_path) < self.problem.best_result:
+            self.problem.update_best_result(iterate_best_path);
 
-        if start == dest:
-            return 0.0
+        # Update Pheromone.
+        self.update_pheromone();
 
-        else:
-            pheromone_percent = (self.city_pheromone_array[start][dest]) ** ALPHA
-            distance_percent = (1.0 / self.problem.get_city_distance(start, dest)) ** BETA
-            return pheromone_percent * distance_percent
-
-    # 可调校：设置信息素的添加函数：
-    def pheromone_add_function(self, ant):
-        if ant.result < 0:
-            return ENLARGE_Q / self.ant_judge(ant)
-        else:
-            return ENLARGE_Q / ant.result
+        post_addr = id(self.problem.best_result);
+        return pre_addr != post_addr;
 
     def do_search(self):
 
-        self.first_loop_search()
-        iterate_times = ITERATION
+        self.first_loop_search();
+        iterate_times = ITERATION;
 
         while iterate_times:
-            result_changed = self.loop_search()
-            iterate_times -= 1
+            result_changed = self.loop_search();
+            iterate_times -= 1;
             # Simplify the output
             if result_changed or iterate_times % 50 == 0:
-                print("第%d次迭代，最优解%s" % (ITERATION - iterate_times, self.problem.best_result))
+                print("第%d次迭代，%s = %s" %
+                      (ITERATION - iterate_times, self.problem.best_result, self.problem.split_path_length(self.problem.best_result_path)))
                 # print("最优解路径：", Problem.split_path(self.problem.center_position, self.problem.best_result_path))
-                print("每段长度：", self.problem.split_path_length(self.problem.best_result_path))
 
         return
 
+    @abstractmethod
+    def first_loop_search(self):
+        pass
+
+    @abstractmethod
+    def path_evaluation(self, path):
+        pass
+
+    @abstractmethod
+    def ant_search(self):
+        """
+        :return: return the iterator best ant's path.
+        """
+        pass
+
+    @abstractmethod
+    def update_pheromone(self):
+        pass
+
+    @abstractmethod
+    def heuristic_function(self, start, end):
+        pass
+
+    # Tool function
+    def choose_by_heuristic(self, current_city, tabu_table):
+        probability_array = []
+        for i in range(len(tabu_table)):
+            if tabu_table[i] >= 0:
+                pro = tabu_table[i] * self.heuristic_function(current_city, i)
+                probability_array.append(pro)
+            else:
+                raise ValueError("禁忌表中第%s项值小于零,其值为%s" % (i, tabu_table[i]))
+
+        probability_total = sum(probability_array)
+
+        if probability_total > 0.0:
+            temp = random.random()
+            temp *= probability_total
+            for j in range(self.problem.city_size):
+                temp -= probability_array[j]
+                if temp < 0.0:
+                    return j
+
+        # 如果之前的值未能够很好的选择出来，则进入扫描状态,经测试，扫描算法一般选择的是中心城市
+        for k in range(self.problem.city_size):
+            if tabu_table[k] >= 1:
+                return k
+
+
+class MultiAntColonyAlgorithm(AntColonyAlgorithm):
+    def __init__(self, center=0):
+        super().__init__()
+        return
+
+    # Implement
     def first_loop_search(self):
         self.loop_search()
         self.calc_max_min_pheromone()
@@ -163,45 +198,6 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
         current_pheromone = self.max_pheromone
         self.city_pheromone_array = np.ones((self.problem.city_size, self.problem.city_size))
         self.city_pheromone_array *= current_pheromone
-
-        # 设置EnLargeQ的值
-        # print("max_pheromone:", current_pheromone)
-        # print("best_result", self.problem.best_result)
-
-    def ant_judge(self, ant):
-        if ant.mark == 1 or ant.path[0] == ant.path[-1]:
-            return float_info.max
-        else:
-            return self.problem.result_evaluation(ant.path)
-
-    def loop_search(self):
-        pre_add = id(self.problem.best_result)
-        problem = self.problem
-
-        # 初始化每只蚂蚁
-        for ant in self.search_ant_array:
-            ant.reset_ant()
-        # 进行搜索
-        iterate_best = Ant(1)
-        for ant_item in self.search_ant_array:
-            # 每只蚂蚁的搜索
-            ant_item.random_choose()
-            while (not ant_item.is_finished()) and ant_item.mark == 0:
-                selected_city = self.pheromone_select(ant_item)
-                ant_item.move_to(selected_city)
-            # 蚂蚁构造解完成，测试蚂蚁是否迭代最优
-            ant_item.result = self.ant_judge(ant_item)
-            if self.ant_judge(iterate_best) > ant_item.result:
-                iterate_best = ant_item
-
-        if iterate_best.result < problem.best_result:
-            problem.update_best_result(iterate_best.path)
-
-        # 更新信息素
-        self.update_pheromone()
-        self.add_pheromone_by_average(iterate_best)
-        post_addr = id(self.problem.best_result)
-        return pre_add != post_addr
 
     def calc_max_min_pheromone(self):
         question = self.problem
@@ -216,50 +212,44 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
             print("最大最小信息素计算异常，最大值%s\t最小值%s" % (self.max_pheromone, self.min_pheromone))
             return False
 
+    # Implement
+    def ant_search(self):
+        # 初始化每只蚂蚁
+        for ant in self.search_ant_array:
+            ant.reset_ant();
+        # 进行搜索
+        best_path = [];
+
+        for ant_item in self.search_ant_array:
+            # 每只蚂蚁的搜索
+            ant_item.choose_randomly();
+            while (not ant_item.is_finished()) and ant_item.mark == 0:
+                selected_city = self.choose_by_heuristic(ant_item.current_city_index, ant_item.tabu_table);
+                ant_item.move_to(selected_city);
+            # 蚂蚁构造解完成，测试蚂蚁是否迭代最优
+            ant_item.result = self.path_evaluation(ant_item.path);
+            if self.path_evaluation(best_path) > ant_item.result:
+                best_path = copy(ant_item.path);
+        return best_path;
+
+    # Implement
     def update_pheromone(self, special_ant=None):
         # Pheromone Evaporate
         self.city_pheromone_array *= ROU
         # Each Ant Update Pheromone
         for ant_item in self.search_ant_array:
-            # self.add_pheromone_by_ant(ant_item)
-            self.add_pheromone_by_average(ant_item)
+            self.add_pheromone_by_ant(ant_item)
 
         # Use special ant to do the extra pheromone update.
         if special_ant is not None:
-            self.add_pheromone_by_average(special_ant)
+            self.add_pheromone_by_ant(special_ant)
 
         # Adjust the Max-Min pheromone
         self.check_max_min_pheromone()
 
         return
 
-    def check_max_min_pheromone(self):
-        city_count = self.problem.city_size
-        if self.calc_max_min_pheromone():
-            max_array = np.ones((city_count, city_count)) * self.max_pheromone
-            min_array = np.ones((city_count, city_count)) * self.min_pheromone
-            if_larger = self.city_pheromone_array > self.max_pheromone
-            if_less = self.city_pheromone_array < self.min_pheromone
-            self.city_pheromone_array = np.where(if_larger, max_array, self.city_pheromone_array)
-            self.city_pheromone_array = np.where(if_less, min_array, self.city_pheromone_array)
-            return True
-
-        return False
-
     def add_pheromone_by_ant(self, ant):
-        # Add new Pheromone
-        for position in range(self.problem.city_size):
-            m = ant.path[position - 1]
-            n = ant.path[position]
-            self.city_pheromone_array[m][n] += self.pheromone_add_function(ant)
-            if self.city_pheromone_array[m][n] > self.max_pheromone:
-                self.city_pheromone_array[m][n] = self.max_pheromone
-            if self.city_pheromone_array[m][n] < self.min_pheromone:
-                self.city_pheromone_array[m][n] = self.min_pheromone
-            self.city_pheromone_array[n][m] = self.city_pheromone_array[m][n]
-        return
-
-    def add_pheromone_by_average(self, ant):
         subpaths = Problem.split_path(self.problem.center_position, ant.path)
         subpaths_length = []
         for i in range(len(subpaths)):
@@ -282,7 +272,50 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
                 m = subpath[j - 1]
                 n = subpath[j]
                 self.city_pheromone_array[m][n] += add_pheromone
+        return
 
+    def check_max_min_pheromone(self):
+        city_count = self.problem.city_size
+        if self.calc_max_min_pheromone():
+            max_array = np.ones((city_count, city_count)) * self.max_pheromone
+            min_array = np.ones((city_count, city_count)) * self.min_pheromone
+            if_larger = self.city_pheromone_array > self.max_pheromone
+            if_less = self.city_pheromone_array < self.min_pheromone
+            self.city_pheromone_array = np.where(if_larger, max_array, self.city_pheromone_array)
+            self.city_pheromone_array = np.where(if_less, min_array, self.city_pheromone_array)
+            return True
+
+        return False
+
+    # Implement
+    def heuristic_function(self, start, dest):
+        # 优化代码
+        # if start > self.problem.city_size or start < 0 or dest > self.problem.city_size or start < 0:
+        #     print("城市信息素计算异常：出现开始/目标城市下标超出范围")
+        #     return
+
+        if start == dest:
+            return 0.0
+
+        else:
+            pheromone_percent = (self.city_pheromone_array[start][dest]) ** ALPHA
+            distance_percent = (1.0 / self.problem.get_city_distance(start, dest)) ** BETA
+            return pheromone_percent * distance_percent
+
+    # 可调校：设置信息素的添加函数：
+    def pheromone_add_function(self, ant):
+        if ant.result < 0:
+            return ENLARGE_Q / self.path_evaluation(ant.path)
+        else:
+            return ENLARGE_Q / ant.result
+
+    def path_evaluation(self, path):
+        if (not path) or (-1 in path):
+            return float_info.max;
+        else:
+            return self.problem.result_evaluation(path)
+
+    # Ready to deprecated
     def pheromone_select(self, ant):
         probability_array = []
         for i in range(len(ant.tabu_table)):

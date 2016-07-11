@@ -13,6 +13,7 @@ UNIFORMITY_WEIGHT = 1
 PARALLEL_NUMBER = 5
 AVERAGE_RATE = 0.5
 
+
 def split_path(center_pos, path):
     size = len(path)
     start_pos = path.index(center_pos)
@@ -84,13 +85,6 @@ class TspProblem(Problem):
         return
 
     def get_city_distance(self, start, desti):
-        # 被优化代码
-        # result = self.city_distance_array[start][desti]
-        # if result > 0:
-        #     return result
-        # else:
-        #     print("获取城市之间距离异常：城市间距离小于等于0")
-        #     print("Start:%s,Dest:%s" % (start, desti))
         return self.city_distance_array[start][desti]
 
     def split_path_length(self, path):
@@ -119,7 +113,6 @@ class TspProblem(Problem):
         variance = np.var(subtour_distance)
         std = np.std(subtour_distance)
 
-        # result = average * PARALLEL_NUMBER * AVERAGE_RATE + variance *(1- AVERAGE_RATE)
         result = average + UNIFORMITY_WEIGHT * variance
         return result
 

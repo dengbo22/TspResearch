@@ -185,6 +185,12 @@ class AntColonyAlgorithm(object):
             if tabu_table[k] >= 1:
                 return k
 
+    def check_pheromone(self, multiple):
+        less = self.city_pheromone_array < (self.min_pheromone * multiple);
+        true_count = len(self.city_pheromone_array[less])
+        print("MultiPle:%s, Percent: %s" % (multiple, true_count / (self.problem.city_size * self.problem.city_size)));
+        return true_count;
+
 
 class MultiAntColonyAlgorithm(AntColonyAlgorithm):
     def __init__(self, center=0):
@@ -272,7 +278,8 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
             for j in range(subpath_size):
                 m = subpath[j - 1]
                 n = subpath[j]
-                self.city_pheromone_array[m][n] += add_pheromone
+                self.city_pheromone_array[m][n] += add_pheromone;
+                self.city_pheromone_array[n][m] = self.city_pheromone_array[m][n];
         return
 
     # 可调校：设置信息素的添加函数：

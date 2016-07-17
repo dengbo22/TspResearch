@@ -192,6 +192,18 @@ class AntColonyAlgorithm(object):
         print("MultiPle:%s, Percent: %s" % (multiple, true_count / (self.problem.city_size * self.problem.city_size)));
         return true_count;
 
+    def get_ant_pass_count(self):
+        pass_array = np.ones(self.city_pheromone_array.shape)
+        for ant in self.search_ant_array:
+            for i in range(len(ant.path)):
+                m = ant.path[i - 1];
+                n = ant.path[i];
+                pass_array[m][n] -= 1;
+                pass_array[n][m] = pass_array[m][n];
+
+        changed = pass_array < 1;
+        return len(pass_array[changed]);
+
 
 class MultiAntColonyAlgorithm(AntColonyAlgorithm):
     def __init__(self, center=0):
@@ -214,7 +226,6 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
         avg = int(question.city_size / 2) - 1
         self.min_pheromone = (self.max_pheromone * (1 - factor)) / ((avg - 1) * factor)
         if self.max_pheromone > self.min_pheromone:
-            # print("Max:%d, Min:%d" %(self.max_pheromone, self.min_pheromone))
             return True
         else:
             print("最大最小信息素计算异常，最大值%s\t最小值%s" % (self.max_pheromone, self.min_pheromone))
@@ -254,7 +265,6 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
 
         # Adjust the Max-Min pheromone
         self.check_max_min_pheromone()
-
         return
 
     def add_pheromone_by_ant(self, ant):
@@ -266,7 +276,11 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
         average = np.mean(subpaths_rate)
         subpaths_rate -= average
         divider = max(subpaths_rate)
-        subpaths_rate /= divider
+        if divider != 0:
+            subpaths_rate /= divider
+        else:
+            print("死亡蚂蚁，不添加信息素...");
+            return;
         # 每段路径根据Rate来进行更新
 
         base_pheromone = self.pheromone_add_function(ant)

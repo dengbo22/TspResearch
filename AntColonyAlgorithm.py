@@ -2,7 +2,7 @@
 import random
 import Problem
 import numpy as np
-from abc import ABCMeta, abstractmethod
+from abc import abstractmethod
 from sys import float_info
 from copy import copy
 
@@ -162,19 +162,20 @@ class AntColonyAlgorithm(object):
 
     # Tool function
     def choose_by_heuristic(self, current_city, tabu_table):
-        probability_array = []
+        probability_array = np.zeros(self.problem.city_size);
+
         for i in range(len(tabu_table)):
             if tabu_table[i] >= 0:
-                pro = tabu_table[i] * self.heuristic_function(current_city, i)
-                probability_array.append(pro)
+                pro = tabu_table[i] * self.heuristic_function(current_city, i);
+                probability_array[i] = pro;
             else:
                 raise ValueError("禁忌表中第%s项值小于零,其值为%s" % (i, tabu_table[i]))
 
         probability_total = sum(probability_array)
-
+        # 此处跳过所有城市都不可选的情况
         if probability_total > 0.0:
+            probability_array /= probability_total;
             temp = random.random()
-            temp *= probability_total
             for j in range(self.problem.city_size):
                 temp -= probability_array[j]
                 if temp < 0.0:
@@ -226,13 +227,13 @@ class MultiAntColonyAlgorithm(AntColonyAlgorithm):
             ant.reset_ant();
         # 进行搜索
         best_path = [];
-
         for ant_item in self.search_ant_array:
             # 每只蚂蚁的搜索
             ant_item.choose_randomly();
             while (not ant_item.is_finished()) and ant_item.mark == 0:
                 selected_city = self.choose_by_heuristic(ant_item.current_city_index, ant_item.tabu_table);
                 ant_item.move_to(selected_city);
+
             # 蚂蚁构造解完成，测试蚂蚁是否迭代最优
             ant_item.result = self.path_evaluation(ant_item.path);
             if self.path_evaluation(best_path) > ant_item.result:

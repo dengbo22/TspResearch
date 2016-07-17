@@ -192,7 +192,7 @@ class AntColonyAlgorithm(object):
         print("MultiPle:%s, Percent: %s" % (multiple, true_count / (self.problem.city_size * self.problem.city_size)));
         return true_count;
 
-    def get_ant_pass_count(self):
+    def test_ant_pass_count(self):
         pass_array = np.ones(self.city_pheromone_array.shape)
         for ant in self.search_ant_array:
             for i in range(len(ant.path)):
@@ -203,6 +203,15 @@ class AntColonyAlgorithm(object):
 
         changed = pass_array < 1;
         return len(pass_array[changed]);
+
+    def test_ant_next(self, current):
+        result_list = [];
+        for ant in self.search_ant_array:
+            next_index = ant.path.index(current) + 1;
+            result = ant.path[next_index % len(ant.path)];
+            if result not in result_list:
+                result_list.append(result);
+        return result_list;
 
 
 class MultiAntColonyAlgorithm(AntColonyAlgorithm):
